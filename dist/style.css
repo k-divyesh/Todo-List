@@ -1,0 +1,39 @@
+body, html{
+    padding: 0px;
+    margin: 0px;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+
+#sidebar {
+    border: 2px solid green;
+}
+
+#tasksContainer {
+    border: 2px solid red;
+}
+
+.addTaskButton {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+
+    font-size: 3rem;
+    border-radius: 50%;
+    width: 100px;
+    aspect-ratio: 1;
+}
+
+.button {
+    cursor: pointer;
+}
+

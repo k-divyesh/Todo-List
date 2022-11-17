@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo List</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div id="sidebar">
+        <h1 id="heading">
+            ToDo List
+        </h1>
+        <form action="" id="addProject">
+            <input type="text" id="projectName" placeholder="Project Name" maxlength="25">
+            <input type="submit" class="button" value="Add Project">
+        </form>
+    </div>
+    <main id="tasksContainer"></main>
+    <button class="addTaskButton button" type="button">+</button>
 </body>
 </html>
