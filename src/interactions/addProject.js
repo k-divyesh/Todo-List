@@ -1,3 +1,5 @@
+import project from "../storage/projects";
+
 function onClickAddProject(){
     const sidebar = document.querySelector("#sidebar")
     const addProject = document.querySelector("#addProject")
@@ -5,6 +7,8 @@ function onClickAddProject(){
         e.preventDefault()
         var projectName = document.getElementById("projectName").value
         sidebar.append(createProject(projectName));
+        projectName = project()
+        console.log(projectName)
         clearAddProjectInput()
     })
 }
