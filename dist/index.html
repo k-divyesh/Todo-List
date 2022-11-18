@@ -17,12 +17,21 @@
         <h1 id="heading">
             ToDo List
         </h1>
-        <form action="" id="addProject">
+        <form id="addProject">
             <input type="text" id="projectName" placeholder="Project Name" maxlength="25">
             <input type="submit" class="button" value="Add Project">
         </form>
     </div>
-    <main id="tasksContainer"></main>
+    <main id="tasksContainer">
+        <form class="task" action="/">
+            <input id="task1" class="checkbox" type="checkbox">
+            <label for="task1">
+                <span class="taskName">Task1</span>
+                <p class="taskDesc"> lorem espum</p>
+                <time class="dueDate" datetime="12/1/2022"></time></div>
+            </label>
+        </form>
+    </main>
     <button class="addTaskButton button" type="button">+</button>
 </body>
 </html>

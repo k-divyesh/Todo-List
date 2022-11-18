@@ -1,3 +1,14 @@
+:root {
+    --primary: #FFFBFB;
+    --background: #F0EEF1;
+    --green: #9FFF9C;
+    --font: #050505;
+    --red: #FF9C9C;
+
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+
 body, html{
     padding: 0px;
     margin: 0px;
@@ -6,20 +17,38 @@ body, html{
 *{
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    color: var(--font);
 }
 
 body{
     display: flex;
     flex-direction: row;
-    justify-content: stretch;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--background);
 }
 
 #sidebar {
-    border: 2px solid green;
+    box-shadow: var(--shadow);
 }
 
 #tasksContainer {
-    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.task {
+    padding: 2%;
+    font-size: 1.4rem;
+    box-shadow: var(--shadow);
+    width: 100%;
+}
+
+.checkbox {
+    white-space: nowrap;
 }
 
 .addTaskButton {
@@ -31,6 +60,9 @@ body{
     border-radius: 50%;
     width: 100px;
     aspect-ratio: 1;
+
+    border: none;
+    box-shadow: var(--shadow);
 }
 
 .button {
