@@ -8,7 +8,6 @@ function onClickAddProject(){
         var projectName = document.getElementById("projectName").value
         sidebar.append(createProject(projectName));
         projectName = project()
-        console.log(projectName)
         clearAddProjectInput()
     })
 }
@@ -19,7 +18,7 @@ function clearAddProjectInput() {
 }
 
 function createProject(projectName) {
-    const newProject = document.createElement("h2")
+    const newProject = document.createElement("h3")
     newProject.classList.add("project")
     newProject.innerHTML = projectName;
     return newProject;

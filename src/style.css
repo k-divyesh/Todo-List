@@ -6,6 +6,7 @@
     --red: #FF9C9C;
 
     --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
 }
 
 
@@ -24,13 +25,31 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 100vh;
     background-color: var(--background);
 }
 
 #sidebar {
     box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
 }
+
+#addProject { /* form */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project {
+    width: 100%;
+    margin: 0;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
 
 #tasksContainer {
     display: flex;
@@ -41,17 +60,35 @@ body{
 }
 
 .task {
-    padding: 2%;
+    padding: 1.2%;
     font-size: 1.4rem;
     box-shadow: var(--shadow);
     width: 100%;
+    position: relative;
+    font-size: 1.2rem;
 }
 
-.checkbox {
-    white-space: nowrap;
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
 
-.addTaskButton {
+.dueDate {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+.icon{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+
+.createTaskButton {
     position: fixed;
     bottom: 10%;
     right: 10%;
@@ -65,7 +102,49 @@ body{
     box-shadow: var(--shadow);
 }
 
-.button {
-    cursor: pointer;
+#addTaskForm {
+    width: min-content;
+    padding: 40px;
+    background-color: var(--primary);
+    border-radius: 20px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
+
+#addTaskForm > h3 {
+    margin: 0px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+#high, #low, #mid {
+    margin-left: 0;
+}
+
+
+.button, .project {
+    cursor: pointer;
+    background-color: var(--primary);
+}
+
+
+.project:hover, .button:hover {
+    background-color: var(--green);
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.material-symbols-sharp {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+    color: red;
+}
