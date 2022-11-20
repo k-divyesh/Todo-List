@@ -1,9 +1,9 @@
-import manageProject from "./interactions/addProject";
+import onClickAddProject from "./interactions/addProject";
 import taskFormDisplay from "./interactions/displayAddTaskForm";
 import addTask from "./interactions/addTask";
 
 function allInteractions() {
-    manageProject();
+    onClickAddProject();
     taskFormDisplay();
     addTask();
 }
