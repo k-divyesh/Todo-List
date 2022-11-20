@@ -21,7 +21,7 @@
             ToDo List
         </h1>
         <form id="addProject">
-            <input type="text" id="projectName" placeholder="Project Name" maxlength="25">
+            <input type="text" id="projectName" placeholder="Project Name" maxlength="25" required>
             <input type="submit" class="button" value="Add Project">
         </form>
     </div>
@@ -73,15 +73,15 @@
 
     <form id="addTaskForm" class="hide temp">
         <h3>Add Task Form</h3>
-        <label for="selectedProject">Select Project: </label><input id="selectedProject" type="text">
-        <input type="text" id="taskName" placeholder="Task Name">
-        <textarea name="description" id="description" cols="30" rows="3" placeholder="Description"></textarea>
-        <span>Due Date: </span><input id="dueDate" type="date">
+        <label for="selectedProject">Select Project: </label><input id="selectedProject" type="text" required>
+        <input type="text" id="taskName" placeholder="Task Name" required>
+        <textarea name="description" id="description" cols="30" rows="3" placeholder="Description" required></textarea>
+        <span>Due Date: </span><input id="dueDate" type="date" required>
         <br>
         <span>Priority:</span>
-        <label for="high"><input type="radio" name="priority" id="high" value="high">high</label>
-        <label for="mid"><input type="radio" name="priority" id="mid" value="mid">mid</label>
-        <label for="low"><input type="radio" name="priority" id="low" value="low">low</label>
+        <label for="high"><input type="radio" name="priority" id="high" value="high" required>high</label>
+        <label for="mid"><input type="radio" name="priority" id="mid" value="mid" required>mid</label>
+        <label for="low"><input type="radio" name="priority" id="low" value="low" required>low</label>
         <br>
         <input type="submit" value="Add Task" id="addTaskButton">
         <span class="closeForm material-symbols-sharp">close</span>
