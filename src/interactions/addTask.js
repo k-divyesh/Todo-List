@@ -1,4 +1,4 @@
-import {project, allProjects, task } from "../storage.";
+import {project, allProjects,task } from "../storage.";
 
 function onSubmitTaskForm() {
     const addTaskForm = document.querySelector("#addTaskForm");
@@ -21,6 +21,7 @@ function appendTaskObjInProject(selectedProject, taskName, taskDesc, taskDate, t
     const taskObj = task(taskName, taskDesc, taskDate, taskPriority);
     var thisProject = allProjects.find(project => project.name == `${selectedProject}`)
     thisProject.addTask(taskObj)
+    // console.log(thisProject)
 
     //remove later
     console.log(`allprojects: \n ${allProjects}`)

@@ -1,10 +1,9 @@
-import onClickAddProject from "./interactions/addProject";
-// import setCurrent from "./interactions/currentProject";
+import manageProject from "./interactions/addProject";
 import taskFormDisplay from "./interactions/displayAddTaskForm";
 import addTask from "./interactions/addTask";
 
 function allInteractions() {
-    onClickAddProject();
+    manageProject();
     taskFormDisplay();
     addTask();
 }

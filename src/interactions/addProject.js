@@ -1,24 +1,37 @@
 import { allProjects, project } from "../storage.";
 
-function onClickAddProject(){
-    const sidebar = document.querySelector("#sidebar")
-    const addProject = document.querySelector("#addProject")
-    addProject.addEventListener("submit", function(e) {
-        e.preventDefault()
-        var projectName = document.getElementById("projectName").value
-        sidebar.append(createProject(projectName));
+//back
+function logic_onClickAddProject(){
+    const addProjectForm = document.querySelector("#addProject")
+    addProjectForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        var projectName = document.querySelector("#projectName").value;
+        console.log(projectName)
         allProjects.push(project(projectName));
-        addProject.reset()        
+        addProjectForm.reset();
     })
 }
 
-function createProject(projectName) {
-    const newProject = document.createElement("h3")
-    newProject.classList.add("project")
-    newProject.innerHTML = projectName;
-    newProject.setAttribute('id', `${projectName}`);
-    return newProject;
+//front
+function display_onClickAddProject() {
+    const sidebar = document.querySelector("#sidebar");
+    const addProjectForm = document.querySelector("#addProject");
+    addProjectForm.addEventListener("submit", function(e) {
+        e.preventDefault()
+        var projectName = document.getElementById("projectName").value;
+        const newProject = document.createElement("h3");
+        newProject.classList.add("project");
+        newProject.innerHTML = projectName;
+        newProject.setAttribute('id', `${projectName}`);
+        sidebar.append(newProject)
+    })
 }
 
 
-export default onClickAddProject;
+function manageProject() {
+    display_onClickAddProject();
+    logic_onClickAddProject();
+}
+
+
+export default manageProject;
