@@ -1,5 +1,4 @@
-import project from "../storage/projects";
-import { allProjects } from "../storage/projects";
+import { allProjects, project } from "../storage.";
 
 function onClickAddProject(){
     const sidebar = document.querySelector("#sidebar")

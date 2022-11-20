@@ -5,7 +5,6 @@ import addTask from "./interactions/addTask";
 
 function allInteractions() {
     onClickAddProject();
-    // var ongoingProject = setCurrent();
     taskFormDisplay();
     addTask();
 }

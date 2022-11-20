@@ -1,6 +1,6 @@
 export const allProjects = [];
 
-const project = (name) => {
+export const project = (name) => {
     const allTasks = [];
 
     const addTask = (taskObj) => {
@@ -21,3 +21,9 @@ const project = (name) => {
 }
 
 export default project;
+
+
+export const task = (name, desc, date, priority) => {
+    return{name, desc, date, priority};
+}
+

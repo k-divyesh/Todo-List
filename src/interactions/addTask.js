@@ -1,5 +1,4 @@
-import {project, allProjects } from "../storage/projects";
-import task from "../storage/tasks";
+import {project, allProjects, task } from "../storage.";
 
 function onSubmitTaskForm() {
     const addTaskForm = document.querySelector("#addTaskForm");
