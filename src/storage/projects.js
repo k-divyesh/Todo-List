@@ -1,16 +1,22 @@
-const project = () => {
-    const tasks = [];
+export const allProjects = [];
+
+const project = (name) => {
+    const allTasks = [];
 
     const addTask = (taskObj) => {
-        tasks.push(taskObj);
+        allTasks.push(taskObj);
     }
     const removeTask = (taskObj) => {
-        tasks.remove(taskObj);
+        allTasks.remove(taskObj);
     }
-
+    const tasks = () => {
+        return allTasks;
+    }
     return {
+        name,
         addTask,
         removeTask,
+        tasks,
     }
 }
 

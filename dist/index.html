@@ -73,9 +73,10 @@
 
     <form id="addTaskForm" class="hide temp">
         <h3>Add Task Form</h3>
+        <label for="selectedProject">Select Project: </label><input id="selectedProject" type="text">
         <input type="text" id="taskName" placeholder="Task Name">
         <textarea name="description" id="description" cols="30" rows="3" placeholder="Description"></textarea>
-        Due Date: <input type="date">
+        <span>Due Date: </span><input id="dueDate" type="date">
         <br>
         <span>Priority:</span>
         <label for="high"><input type="radio" name="priority" id="high" value="high">high</label>

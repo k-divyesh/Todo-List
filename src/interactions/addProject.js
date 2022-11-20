@@ -1,4 +1,5 @@
 import project from "../storage/projects";
+import { allProjects } from "../storage/projects";
 
 function onClickAddProject(){
     const sidebar = document.querySelector("#sidebar")
@@ -7,20 +8,16 @@ function onClickAddProject(){
         e.preventDefault()
         var projectName = document.getElementById("projectName").value
         sidebar.append(createProject(projectName));
-        projectName = project()
-        clearAddProjectInput()
+        allProjects.push(project(projectName));
+        addProject.reset()        
     })
-}
-
-function clearAddProjectInput() {
-    var formInput = document.querySelector("#projectName")
-    formInput.value = "";
 }
 
 function createProject(projectName) {
     const newProject = document.createElement("h3")
     newProject.classList.add("project")
     newProject.innerHTML = projectName;
+    newProject.setAttribute('id', `${projectName}`);
     return newProject;
 }
 
