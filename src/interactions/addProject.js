@@ -1,5 +1,8 @@
 import { allProjects, project } from "../storage.";
+import { dropDown } from "./displayAddTaskForm";
 import selectProject from "./selectProject";
+
+
 //back
 function logic_onClickAddProject(pName) {
     allProjects.push(project(pName));
@@ -49,6 +52,7 @@ function onClickAddProject(){
         display_onClickAddProject(sidebar);
         addProjectForm.reset();
         selectProject();
+        dropDown();
     })
 }
 

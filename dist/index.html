@@ -76,7 +76,9 @@
     <!-- 3 -->
     <form id="addTaskForm" class="hide temp">
         <h3>Add Task Form</h3>
-        <label for="selectedProject">Select Project: </label><input id="selectedProject" type="text" required>
+        <!-- <label for="selectedProject">Select Project: </label><input id="selectedProject" type="text" required> -->
+        <label for="selectProject">select a project:</label>
+        <select name="selectProject" id="selectProject" required></select>
         <input type="text" id="taskName" placeholder="Task Name" required>
         <textarea name="description" id="description" cols="30" rows="3" placeholder="Description" required></textarea>
         <span>Due Date: </span><input id="dueDate" type="date" required>
