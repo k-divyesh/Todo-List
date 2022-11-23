@@ -1,4 +1,6 @@
-import {project, allProjects,task } from "../storage.";
+import {allProjects,task } from "../storage.";
+import { displayTasks, selectedProject as sp } from "./selectProject";
+
 
 function onSubmitTaskForm() {
     const addTaskForm = document.querySelector("#addTaskForm");
@@ -11,6 +13,11 @@ function onSubmitTaskForm() {
             document.querySelector("#dueDate").value,
             Array.from(document.getElementsByName("priority")).find((radio) => radio.checked).value
         )
+        try{
+            displayTasks(sp);
+        } catch{
+            //skip error
+        }
         addTaskForm.reset()
     })
 }
@@ -22,7 +29,7 @@ function appendTaskObjInProject(selectedProject, taskName, taskDesc, taskDate, t
     var thisProject = allProjects.find(project => project.name == `${selectedProject}`)
     thisProject.addTask(taskObj)
     // console.log(thisProject)
-
+    
     //remove later
     console.log(`allprojects: \n ${allProjects}`)
     allProjects.forEach(project => {
