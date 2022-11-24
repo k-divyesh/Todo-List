@@ -1,7 +1,6 @@
 import { allProjects } from "../storage.";
 
 export function dropDown() {
-    console.log("fun working")
     const nameOption = document.querySelector("#selectProject");
     nameOption.innerHTML = "";
     allProjects.forEach(proj => {

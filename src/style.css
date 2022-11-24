@@ -59,14 +59,6 @@ body{
     width: 100%;
 }
 
-.task {
-    padding: 1.2%;
-    font-size: 1.4rem;
-    box-shadow: var(--shadow);
-    width: 100%;
-    position: relative;
-    font-size: 1.2rem;
-}
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -97,7 +89,7 @@ body{
     border-radius: 50%;
     width: 100px;
     aspect-ratio: 1;
-
+    
     border: none;
     box-shadow: var(--shadow);
 }
@@ -147,4 +139,26 @@ body{
     transform: translate(-50%, 50%);
     border-radius: 50%;
     color: red;
+}
+
+.task {
+    padding: 1.2%;
+    box-shadow: var(--shadow);
+    width: 100%;
+    position: relative;
+    font-size: 1.2rem;
+}
+
+
+.highColor {
+    border-top: solid #F21700 15px;
+}
+
+.midColor {
+    border-top: solid #FF7700 15px;
+}
+
+
+.lowColor {
+    border-top: solid #ffa300 15px;
 }

@@ -19,11 +19,8 @@ export function displayTasks(ObjName) {
     const tasksContainer = document.querySelector("#tasksContainer")
     tasksContainer.innerHTML="";
     var project = allProjects.find(project => project.name == `${ObjName}`);
-    console.log(project);
     const allTasks = project.tasks();
-    // console.log(project.tasks)
     allTasks.forEach(task => {
-        console.log(task.name);
         var newTask = document.createElement("form");
         newTask.classList.add("task");
         newTask.innerHTML = `
@@ -35,10 +32,11 @@ export function displayTasks(ObjName) {
             <span class="material-symbols-outlined icon">delete</span>
             </label>
             `;
-            tasksContainer.append(newTask);
-        });    
-    }
-
-
-    
-
+        if(task.priority == "high"){
+            newTask.classList.add("highColor")
+        } else if(task.priority == "mid") {
+            newTask.classList.add("midColor")
+        } else newTask.classList.add("lowColor")
+        tasksContainer.append(newTask);
+    });    
+}
