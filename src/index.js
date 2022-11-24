@@ -1,4 +1,4 @@
 import css from './style.css';
-import allInteractions from "./interactions";
+import allInteractions from './interactions';
 
 allInteractions();

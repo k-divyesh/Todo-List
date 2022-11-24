@@ -1,27 +1,26 @@
 :root {
-    --primary: #FFFBFB;
-    --background: #F0EEF1;
-    --green: #9FFF9C;
+    --primary: #fffbfb;
+    --background: #f0eef1;
+    --green: #9fff9c;
     --font: #050505;
-    --red: #FF9C9C;
+    --red: #ff9c9c;
 
     --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
 }
 
-
-body, html{
+body,
+html {
     padding: 0px;
     margin: 0px;
 }
 
-*{
+* {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     color: var(--font);
 }
 
-body{
+body {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -36,7 +35,8 @@ body{
     height: fit-content;
 }
 
-#addProject { /* form */
+#addProject {
+    /* form */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +50,6 @@ body{
     text-align: center;
 }
 
-
 #tasksContainer {
     display: flex;
     flex-direction: column;
@@ -59,13 +58,8 @@ body{
     width: 100%;
 }
 
-
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
 }
 
 .dueDate {
@@ -73,12 +67,11 @@ body{
     top: 5%;
     right: 5%;
 }
-.icon{
+.icon {
     position: absolute;
     bottom: 5%;
     right: 5%;
 }
-
 
 .createTaskButton {
     position: fixed;
@@ -89,7 +82,7 @@ body{
     border-radius: 50%;
     width: 100px;
     aspect-ratio: 1;
-    
+
     border: none;
     box-shadow: var(--shadow);
 }
@@ -106,25 +99,26 @@ body{
     transform: translate(-50%, -50%);
 }
 
-
 #addTaskForm > h3 {
     margin: 0px;
     margin-bottom: 20px;
     text-decoration: underline;
 }
 
-#high, #low, #mid {
+#high,
+#low,
+#mid {
     margin-left: 0;
 }
 
-
-.button, .project {
+.button,
+.project {
     cursor: pointer;
     background-color: var(--primary);
 }
 
-
-.project:hover, .button:hover {
+.project:hover,
+.button:hover {
     background-color: var(--green);
 }
 
@@ -149,15 +143,13 @@ body{
     font-size: 1.2rem;
 }
 
-
 .highColor {
-    border-top: solid #F21700 15px;
+    border-top: solid #f21700 15px;
 }
 
 .midColor {
-    border-top: solid #FF7700 15px;
+    border-top: solid #ff7700 15px;
 }
-
 
 .lowColor {
     border-top: solid #ffa300 15px;

@@ -1,7 +1,6 @@
-import { allProjects, project } from "../storage.";
-import { dropDown } from "./displayAddTaskForm";
-import selectProject from "./selectProject";
-
+import { allProjects, project } from '../storage.';
+import { dropDown } from './displayAddTaskForm';
+import selectProject from './selectProject';
 
 //back
 function logic_onClickAddProject(pName) {
@@ -10,40 +9,39 @@ function logic_onClickAddProject(pName) {
 
 function checkDuplicate(pName) {
     var duplicateExists = false;
-    allProjects.some(proj => {
+    allProjects.some((proj) => {
         if (proj.name == pName) {
-            duplicateExists = "project already exists";
+            duplicateExists = 'project already exists';
             return;
         }
-    })
-    if (pName === "") return "enter valid project name"
+    });
+    if (pName === '') return 'enter valid project name';
     return duplicateExists;
 }
 
 //front
 function display_onClickAddProject(parent) {
-    const projects = [...document.querySelectorAll(".project")]
-    projects.forEach(element => {
-        element.remove()
+    const projects = [...document.querySelectorAll('.project')];
+    projects.forEach((element) => {
+        element.remove();
     });
-    allProjects.forEach(project => {
-        const newProject = document.createElement("h3");
-        newProject.classList.add("project");
+    allProjects.forEach((project) => {
+        const newProject = document.createElement('h3');
+        newProject.classList.add('project');
         newProject.innerHTML = project.name;
         newProject.setAttribute('id', `${project.name}`);
-        parent.append(newProject);    
-    })
+        parent.append(newProject);
+    });
 }
 
-
 // back & front
-function onClickAddProject(){
-    const sidebar = document.querySelector("#sidebar");
-    const addProjectForm = document.querySelector("#addProject");
-    addProjectForm.addEventListener("submit", function(e){
+function onClickAddProject() {
+    const sidebar = document.querySelector('#sidebar');
+    const addProjectForm = document.querySelector('#addProject');
+    addProjectForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        const projectName = document.querySelector("#projectName").value.trim();
-        if(checkDuplicate(projectName) != false) {
+        const projectName = document.querySelector('#projectName').value.trim();
+        if (checkDuplicate(projectName) != false) {
             alert(`${checkDuplicate(projectName)}`);
             addProjectForm.reset();
             return;
@@ -53,8 +51,7 @@ function onClickAddProject(){
         addProjectForm.reset();
         selectProject();
         dropDown();
-    })
+    });
 }
-
 
 export default onClickAddProject;

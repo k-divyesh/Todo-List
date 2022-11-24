@@ -1,98 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
-    <script src="main.js" defer></script>
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <!-- delete icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!-- close icon -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
-</head>
-<body>
-    <!-- 1 -->
-    <div id="sidebar">
-        <h1 id="heading">
-            ToDo List
-        </h1>
-        <form id="addProject">
-            <input type="text" id="projectName" placeholder="Project Name" maxlength="25" required>
-            <input type="submit" class="button" value="Add Project">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo List</title>
+        <script src="main.js" defer></script>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+            rel="stylesheet"
+        />
+        <!-- delete icon -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <!-- close icon -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0"
+        />
+    </head>
+    <body>
+        <!-- 1 -->
+        <div id="sidebar">
+            <h1 id="heading">ToDo List</h1>
+            <form id="addProject">
+                <input
+                    type="text"
+                    id="projectName"
+                    placeholder="Project Name"
+                    maxlength="25"
+                    required
+                />
+                <input type="submit" class="button" value="Add Project" />
+            </form>
+            <!-- <h3 class="project" id="sdf">default project</h3> -->
+        </div>
+
+        <!-- 2 -->
+        <main id="tasksContainer">
+            <!-- <form class="task"> -->
+            <!-- <input id="task1" class="checkbox" type="checkbox" /> -->
+            <!-- <label for="task1"> -->
+            <!-- <span class="taskName">Task1</span> -->
+            <!-- <p class="taskDesc"> -->
+            <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. -->
+            <!-- Sed bibendum blandit lorem, non placerat mi suscipit et. -->
+            <!-- Orci varius natoque penatibus et magnis dis parturient -->
+            <!-- montes, nascetur ridiculus mus. Phasellus a purus a -->
+            <!-- augue iaculis imperdiet. Aliquam id convallis orci, at -->
+            <!-- iaculis leo -->
+            <!-- </p> -->
+            <!-- <span class="dueDate">7/01/2022</span> -->
+            <!-- <span class="material-symbols-outlined icon">delete</span> -->
+            <!-- </label> -->
+            <!-- </form> -->
+        </main>
+
+        <!-- 3 -->
+        <form id="addTaskForm" class="hide temp">
+            <h3>Add Task Form</h3>
+            <!-- <label for="selectedProject">Select Project: </label><input id="selectedProject" type="text" required> -->
+            <label for="selectProject">select a project:</label>
+            <select name="selectProject" id="selectProject" required></select>
+            <input type="text" id="taskName" placeholder="Task Name" required />
+            <textarea
+                name="description"
+                id="description"
+                cols="30"
+                rows="3"
+                placeholder="Description"
+                required
+            ></textarea>
+            <span>Due Date: </span><input id="dueDate" type="date" required />
+            <br />
+            <span>Priority:</span>
+            <label for="high"
+                ><input
+                    type="radio"
+                    name="priority"
+                    id="high"
+                    value="high"
+                    required
+                />high</label
+            >
+            <label for="mid"
+                ><input
+                    type="radio"
+                    name="priority"
+                    id="mid"
+                    value="mid"
+                    required
+                />mid</label
+            >
+            <label for="low"
+                ><input
+                    type="radio"
+                    name="priority"
+                    id="low"
+                    value="low"
+                    required
+                />low</label
+            >
+            <br />
+            <input type="submit" value="Add Task" id="addTaskButton" />
+            <span class="closeForm material-symbols-sharp">close</span>
         </form>
-        <!-- <h3 class="project" id="sdf">default project</h3> -->
-    </div>
 
-    <!-- 2 -->
-    <main id="tasksContainer">
-        <!-- <form class="task"> -->
-            <!-- <input id="task1" class="checkbox" type="checkbox"> -->
-            <!-- <label for="task1"> -->
-<!--  -->
-                <!-- <span class="taskName">Task1</span> -->
-                <!-- <p class="taskDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum blandit lorem, non placerat mi suscipit et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus a purus a augue iaculis imperdiet. Aliquam id convallis orci, at iaculis leo</p> -->
-                <!-- <span class="dueDate">7/01/2022</span> -->
-                <!-- <span class="material-symbols-outlined icon">delete</span> -->
-            <!-- </label> -->
-        <!-- </form> -->
-        <!-- <form class="task"> -->
-            <!-- <input id="task1" class="checkbox" type="checkbox"> -->
-            <!-- <label for="task1"> -->
-<!--  -->
-                <!-- <span class="taskName">Task2</span> -->
-                <!-- <p class="taskDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum blandit lorem, non placerat mi suscipit et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus a purus a augue iaculis imperdiet. Aliquam id convallis orci, at iaculis leo</p> -->
-                <!-- <span class="dueDate">08/01/2022</span> -->
-                <!-- <span class="material-symbols-outlined icon">delete</span> -->
-            <!-- </label> -->
-        <!-- </form> -->
-        <!-- <form class="task"> -->
-            <!-- <input id="task3" class="checkbox" type="checkbox"> -->
-            <!-- <label for="task1"> -->
-<!--  -->
-                <!-- <span class="taskName">Task2</span> -->
-                <!-- <p class="taskDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum blandit lorem, non placerat mi suscipit et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus a purus a augue iaculis imperdiet. Aliquam id convallis orci, at iaculis leo</p> -->
-                <!-- <span class="dueDate">08/01/2022</span> -->
-                <!-- <span class="material-symbols-outlined icon">delete</span> -->
-            <!-- </label> -->
-        <!-- </form> -->
-        <!-- <form class="task"> -->
-            <!-- <input id="task3" class="checkbox" type="checkbox"> -->
-            <!-- <label for="task1"> -->
-<!--  -->
-                <!-- <span class="taskName">Task2</span> -->
-                <!-- <p class="taskDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum blandit lorem, non placerat mi suscipit et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus a purus a augue iaculis imperdiet. Aliquam id convallis orci, at iaculis leo</p> -->
-                <!-- <span class="dueDate">08/01/2022</span> -->
-                <!-- <span class="material-symbols-outlined icon">delete</span> -->
-            <!-- </label> -->
-        <!-- </form> -->
-    </main>
-
-    
-    <!-- 3 -->
-    <form id="addTaskForm" class="hide temp">
-        <h3>Add Task Form</h3>
-        <!-- <label for="selectedProject">Select Project: </label><input id="selectedProject" type="text" required> -->
-        <label for="selectProject">select a project:</label>
-        <select name="selectProject" id="selectProject" required></select>
-        <input type="text" id="taskName" placeholder="Task Name" required>
-        <textarea name="description" id="description" cols="30" rows="3" placeholder="Description" required></textarea>
-        <span>Due Date: </span><input id="dueDate" type="date" required>
-        <br>
-        <span>Priority:</span>
-        <label for="high"><input type="radio" name="priority" id="high" value="high" required>high</label>
-        <label for="mid"><input type="radio" name="priority" id="mid" value="mid" required>mid</label>
-        <label for="low"><input type="radio" name="priority" id="low" value="low" required>low</label>
-        <br>
-        <input type="submit" value="Add Task" id="addTaskButton">
-        <span class="closeForm material-symbols-sharp">close</span>
-    </form>
-
-    <!-- 4 -->
-    <button class="createTaskButton button" type="button">+</button>
-</body>
+        <!-- 4 -->
+        <button class="createTaskButton button" type="button">+</button>
+    </body>
 </html>
